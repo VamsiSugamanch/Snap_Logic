@@ -15,7 +15,7 @@
 		"KARMAK_ACCOUNT_NUMBER": "899999",
 		"INTERFACE": {
 			"ITEM": {
-				"PARTS_INVENTORY_EXTENDED_FILTER": "",
+				"PARTS_INVENTORY_EXTENDED_FILTER": "vamsi1",
 				"PARTS_INVENTORY_EXTENDED_SELECT": "SupplierID,PartNumber:ITEM_CODE,BranchCode:WAREHOUSE_CODE,Description:DESCRIPTION,PartNumber:MASTER_ITEM_CODE,AddDate:ACTIVATION_DATE,AverageCost:UNIT_COST,CurrencyCode:UNIT_COST_CURRENCY,Weight:WEIGHT,SellingUnitOfMeasure:UNIT_OF_MEASURE,SellPackage:PACK_SIZE,BinLocation:BINNING_LOCATION,JobQuantity:STOCK_MULTIPLE,PartsInventoryDetailID:FREE_TEXT_1,BranchID:FREE_TEXT_2,SupplierID:FREE_TEXT_3,StockStatus:FREE_TEXT_4,PartType:FREE_TEXT_5,FullBinQuantity:MAX_STOCK",
 				"PARTS_INVENTORY_EXTENDED_URL": "https://api.karmak.io/ops/dataaccess/Frw/PartsInventoryExtended",
 				"SUPPLIER_URL": "https://api.karmak.io/ops/dataaccess/Frw/Supplier",
@@ -27,7 +27,7 @@
 				"ENABLE_FLAG": "Y"
 			},
 			"SUPPLIER": {
-				"PARTS_INVENTORY_EXTENDED_FILTER": "",
+				"PARTS_INVENTORY_EXTENDED_FILTER": "vamsi2",
 				"PARTS_INVENTORY_EXTENDED_SELECT": "SupplierID,PartNumber:ITEM_CODE,BranchCode:WAREHOUSE_CODE,LeadTime:LEAD_TIME,ReturnCode:RETURNABLE,BuyPackage:MINIMUM_ORDER_QTY,BuyPackage:MULTIPLE_ORDER_QTY,AverageCost:PURCHASE_PRICE,CurrencyCode:PURCHASE_PRICE_CURRENCY,PriceBreakCost:DISCOUNT_ITEM_PRICE_1,CurrencyCode:DISCOUNT_ITEM_PRICE_CURRENCY_1",
 				"PARTS_INVENTORY_EXTENDED_URL": "https://api.karmak.io/ops/dataaccess/Frw/PartsInventoryExtended",
 				"SUPPLIER_URL": "https://api.karmak.io/ops/dataaccess/Frw/Supplier",
