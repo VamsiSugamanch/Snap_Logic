@@ -58,7 +58,6 @@
 			},
             "TRANSACTIONAL_DEMAND": {
 				"PARTS_ORDER_URL": "https://api.karmak.io/ops/dataaccess/Frw/PartsOrder",
-				"PARTS_ORDER_FILTER": "",
 				"PARTS_ORDER_SELECT": "PartsSalesOrderId,JoinID,CompanyName:CUSTOMER_CODE,CreationDate:REQUEST_DATE",
 				"PARTS_ORDER_DETAIL_FILTER": "",
 				"PARTS_ORDER_DETAIL_SELECT": "PartsSalesOrderID,JoinID,PartNumber:ITEM_CODE,Branch:WAREHOUSE_CODE,InvoiceNumber:SALES_ORDER_NUMBER,PartsSalesOrderPartsID:SALES_ORDER_LINE_NUMBER,Quantity:REQUESTED_QUANTITY,AddDate:DEMAND_DATE,PartsActionType:USE_FOR_FORECASTING,PartsActionType:USE_FOR_SERVICE_LEVEL,PartsActionType:USE_FOR_CLASSIFICATION,PartsActionType:FREE_TEXT_1,ItemType:FREE_TEXT_2,PartsActionType:USE_FOR_SALES_VALUE_KPI,AddDate:REQUEST_DATE,OrderStatus:OrderStatus,PartType:PartType",
@@ -73,7 +72,6 @@
 			},
 			"PURCHASE_ORDER": {
 				"PARTS_PO_URL": "https://api.karmak.io/ops/dataaccess/Frw/PartsPO",
-				"PARTS_PO_FILTER": "",
 				"PARTS_PO_SELECT": "PartPurchaseOrderHeaderID,SupplierCode:SUPPLIER_CODE",
 				"PARTS_PO_DETAIL_FILTER": "",
 				"PARTS_PO_DETAIL_SELECT": "PartNumber:ITEM_CODE,PartPurchaseOrderHeaderID,PartPurchaseOrderDetailID,SupplierCode:SUPPLIER_CODE,Quantity:ORDER_QUANTITY,Branch:WAREHOUSE_CODE,PONumber:ORDER_NUMBER,DetailDeliveryDate:REQUESTED_DATE,Status:Status",
