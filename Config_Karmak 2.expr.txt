@@ -1,0 +1,93 @@
+{
+	"config":{
+		"SRC_ACCOUNT_CUST_IN_ARC": "Syncron_Dev/Connector Karmak DMS API/dev/KARMAK_S3",
+		"CUST_IN_ARC_FILE_LOCATION": "s3:///syncron-snaplogic-dev-eu-west-1-customer-in-archive/syncroncsexdev182inventoryxsdemo-30s70u3ayypgzenxkwmp",
+		"SRC_ACCOUNT_IN_FAILED": "Syncron_Dev/Connector Karmak DMS API/dev/KARMAK_S3",
+		"ERR_FILE_LOCATION": "s3:///syncron-snaplogic-dev-eu-west-1-in-failed/syncroncsexdev182inventoryxsdemo-30s70u3ayypgzenxkwmp",
+		"EMAIL_ACCOUNT": "Syncron_Dev/Connector Karmak DMS API/dev/EMAIL_NON_PROD",
+		"SNAPLEX_PATH": "Syncron-GroundPlex-Dev-Ireland",
+		"CHILD_PIPELINE_PROJECT": "Syncron_Dev/Connector Karmak DMS API/dev",
+		"OPSGENIE_ADDRESS": "dinesh.reddy@syncron.com",
+		"FROM_EMAIL": "noreply@Syncron.com",
+		"TGT_DELIMITER": "|",
+		"API_KEY": "f2d59ce7fc9f4e41b632cc66f79d7d5d",
+		"WAREHOUSE_GROUP_CODE":"Karmak_Sandbox",
+		"KARMAK_ACCOUNT_NUMBER": "899999",
+		"INTERFACE": {
+			"ITEM": {
+				"PARTS_INVENTORY_EXTENDED_FILTER": "",
+				"PARTS_INVENTORY_EXTENDED_SELECT": "SupplierID,PartNumber:ITEM_CODE,BranchCode:WAREHOUSE_CODE,Description:DESCRIPTION,PartNumber:MASTER_ITEM_CODE,AddDate:ACTIVATION_DATE,AverageCost:UNIT_COST,CurrencyCode:UNIT_COST_CURRENCY,Weight:WEIGHT,SellingUnitOfMeasure:UNIT_OF_MEASURE,SellPackage:PACK_SIZE,BinLocation:BINNING_LOCATION,JobQuantity:STOCK_MULTIPLE,PartsInventoryDetailID:FREE_TEXT_1,BranchID:FREE_TEXT_2,SupplierID:FREE_TEXT_3,StockStatus:FREE_TEXT_4,PartType:FREE_TEXT_5,FullBinQuantity:MAX_STOCK",
+				"PARTS_INVENTORY_EXTENDED_URL": "https://api.karmak.io/ops/dataaccess/Frw/PartsInventoryExtended",
+				"SUPPLIER_URL": "https://api.karmak.io/ops/dataaccess/Frw/Supplier",
+				"SUPPLIER_FILTER": "",
+				"SUPPLIER_SELECT": "SupplierID,AlternateSupplier:PREFFERED_SUPPLIER_CODE",
+				"TGT_ACCOUNT": "Syncron_Dev/Connector Karmak DMS API/dev/KARMAK_S3",
+				"TGT_FILE_LOCATION": "s3:///syncron-snaplogic-dev-eu-west-1-in/syncroncsexdev182inventoryxsdemo-30s70u3ayypgzenxkwmp",
+				"TGT_FILENAME": "ITEM_FULL_",
+				"ENABLE_FLAG": "Y"
+			},
+			"SUPPLIER": {
+				"PARTS_INVENTORY_EXTENDED_FILTER": "",
+				"PARTS_INVENTORY_EXTENDED_SELECT": "SupplierID,PartNumber:ITEM_CODE,BranchCode:WAREHOUSE_CODE,LeadTime:LEAD_TIME,ReturnCode:RETURNABLE,BuyPackage:MINIMUM_ORDER_QTY,BuyPackage:MULTIPLE_ORDER_QTY,AverageCost:PURCHASE_PRICE,CurrencyCode:PURCHASE_PRICE_CURRENCY,PriceBreakCost:DISCOUNT_ITEM_PRICE_1,CurrencyCode:DISCOUNT_ITEM_PRICE_CURRENCY_1",
+				"PARTS_INVENTORY_EXTENDED_URL": "https://api.karmak.io/ops/dataaccess/Frw/PartsInventoryExtended",
+				"SUPPLIER_URL": "https://api.karmak.io/ops/dataaccess/Frw/Supplier",
+				"SUPPLIER_FILTER": "",
+				"SUPPLIER_SELECT": "SupplierID,AlternateSupplier:SUPPLIER_CODE",
+				"TGT_ACCOUNT": "Syncron_Dev/Connector Karmak DMS API/dev/KARMAK_S3",
+				"TGT_FILE_LOCATION": "s3:///syncron-snaplogic-dev-eu-west-1-in/syncroncsexdev182inventoryxsdemo-30s70u3ayypgzenxkwmp",
+				"TGT_FILENAME": "SUPPLIER_FULL_",
+				"ENABLE_FLAG": "Y"
+			},
+			"REPLACEMENT": {
+				"PARTS_INVENTORY_EXTENDED_FILTER": "",
+				"PARTS_INVENTORY_EXTENDED_SELECT": "SupplierID,PartNumber:ITEM_CODE,BranchCode:WAREHOUSE_CODE,Description:DESCRIPTION,PartNumber:MASTER_ITEM_CODE,AddDate:ACTIVATION_DATE,AverageCost:UNIT_COST,CurrencyCode:UNIT_COST_CURRENCY,Weight:WEIGHT,SellingUnitOfMeasure:UNIT_OF_MEASURE,SellPackage:PACK_SIZE,BinLocation:BINNING_LOCATION,JobQuantity:STOCK_MULTIPLE,PartsInventoryDetailID:FREE_TEXT_1,BranchID:FREE_TEXT_2,SupplierID:FREE_TEXT_3,StockStatus:FREE_TEXT_4,PartType:FREE_TEXT_5,FullBinQuantity:MAX_STOCK",
+				"PARTS_INVENTORY_EXTENDED_URL": "https://api.karmak.io/ops/dataaccess/Frw/PartsInventoryExtended",
+				"TGT_ACCOUNT": "Syncron_Dev/Connector Karmak DMS API/dev/KARMAK_S3",
+				"TGT_FILE_LOCATION": "s3:///syncron-snaplogic-dev-eu-west-1-in/syncroncsexdev182inventoryxsdemo-30s70u3ayypgzenxkwmp",
+				"TGT_FILENAME": "REPLACEMENT_FULL_",
+				"ENABLE_FLAG": "Y"
+			},
+			"STOCK": {
+				"PARTS_INVENTORY_EXTENDED_FILTER": "",
+				"PARTS_INVENTORY_EXTENDED_SELECT": "PartNumber:ITEM_CODE,BranchCode:WAREHOUSE_CODE,QuantityAvailable:CURRENT_STOCK,QuantityOnOrder:OUTSTANDING_ORDER_QUANTITY,QuantityOnBackOrder:TOTAL_BACK_ORDERS,QuantityCommitted:RESERVED_STOCK",
+				"PARTS_INVENTORY_EXTENDED_URL": "https://api.karmak.io/ops/dataaccess/Frw/PartsInventoryExtended",
+				"TGT_ACCOUNT": "Syncron_Dev/Connector Karmak DMS API/dev/KARMAK_S3",
+				"TGT_FILE_LOCATION": "s3:///syncron-snaplogic-dev-eu-west-1-in/syncroncsexdev182inventoryxsdemo-30s70u3ayypgzenxkwmp",
+				"TGT_FILENAME": "STOCK_FULL_",
+				"ENABLE_FLAG": "Y"
+			},
+            "TRANSACTIONAL_DEMAND": {
+				"PARTS_ORDER_URL": "https://api.karmak.io/ops/dataaccess/Frw/PartsOrder",
+				"PARTS_ORDER_FILTER": "",
+				"PARTS_ORDER_SELECT": "PartsSalesOrderId,JoinID,CompanyName:CUSTOMER_CODE,CreationDate:REQUEST_DATE",
+				"PARTS_ORDER_DETAIL_FILTER": "",
+				"PARTS_ORDER_DETAIL_SELECT": "PartsSalesOrderID,JoinID,PartNumber:ITEM_CODE,Branch:WAREHOUSE_CODE,InvoiceNumber:SALES_ORDER_NUMBER,PartsSalesOrderPartsID:SALES_ORDER_LINE_NUMBER,Quantity:REQUESTED_QUANTITY,AddDate:DEMAND_DATE,PartsActionType:USE_FOR_FORECASTING,PartsActionType:USE_FOR_SERVICE_LEVEL,PartsActionType:USE_FOR_CLASSIFICATION,PartsActionType:FREE_TEXT_1,ItemType:FREE_TEXT_2,PartsActionType:USE_FOR_SALES_VALUE_KPI,AddDate:REQUEST_DATE,OrderStatus:OrderStatus,PartType:PartType",
+				"PARTS_ORDER_DETAIL_URL": "https://api.karmak.io/ops/dataaccess/Frw/PartsOrderDetail",
+				"REPAIR_ORDER_DETAILS_FILTER": "",
+				"REPAIR_ORDER_DETAILS_SELECT": "Item:ITEM_CODE,Branch:WAREHOUSE_CODE,InvoiceNumber:SALES_ORDER_NUMBER,DetailID:SALES_ORDER_LINE_NUMBER,AddDate:DEMAND_DATE,TransactionType:USE_FOR_FORECASTING,TransactionType:USE_FOR_SERVICE_LEVEL,TransactionType:USE_FOR_CLASSIFICATION,TransactionType:FREE_TEXT_1,TransactionType:USE_FOR_SALES_VALUE_KPI,ROStatus:ROStatus,PartType:PartType",
+				"REPAIR_ORDER_DETAILS_URL": "https://api.karmak.io/ops/dataaccess/Frw/RepairOrderDetails",
+				"TGT_ACCOUNT": "Syncron_Dev/Connector Karmak DMS API/dev/KARMAK_S3",
+				"TGT_FILE_LOCATION": "s3:///syncron-snaplogic-dev-eu-west-1-in/syncroncsexdev182inventoryxsdemo-30s70u3ayypgzenxkwmp",
+				"TGT_FILENAME": "TRANSACTIONAL_DEMAND_FULL_",
+				"ENABLE_FLAG": "Y"
+			},
+			"PURCHASE_ORDER": {
+				"PARTS_PO_URL": "https://api.karmak.io/ops/dataaccess/Frw/PartsPO",
+				"PARTS_PO_FILTER": "",
+				"PARTS_PO_SELECT": "PartPurchaseOrderHeaderID,SupplierCode:SUPPLIER_CODE",
+				"PARTS_PO_DETAIL_FILTER": "",
+				"PARTS_PO_DETAIL_SELECT": "PartNumber:ITEM_CODE,PartPurchaseOrderHeaderID,PartPurchaseOrderDetailID,SupplierCode:SUPPLIER_CODE,Quantity:ORDER_QUANTITY,Branch:WAREHOUSE_CODE,PONumber:ORDER_NUMBER,DetailDeliveryDate:REQUESTED_DATE,Status:Status",
+				"PARTS_PO_DETAIL_URL": "https://api.karmak.io/ops/dataaccess/Frw/PartsPODetail",
+				"PARTS_INVENTORY_RECEIVING_DETAIL_FILTER": "",
+				"PARTS_INVENTORY_RECEIVING_DETAIL_SELECT": "PartPurchaseOrderDetailID,QuantityRemaining:RECEIVED_QUANTITY,ReceivedDate:RECEIVED_DATE,AddUser:FREE_TEXT_1,LastUpdateUser:FREE_TEXT_2",
+				"PARTS_INVENTORY_RECEIVING_DETAIL_URL": "https://api.karmak.io/ops/dataaccess/Frw/PartsInventoryReceivingDetail",
+				"TGT_ACCOUNT": "Syncron_Dev/Connector Karmak DMS API/dev/KARMAK_S3",
+				"TGT_FILE_LOCATION": "s3:///syncron-snaplogic-dev-eu-west-1-in/syncroncsexdev182inventoryxsdemo-30s70u3ayypgzenxkwmp",
+				"TGT_FILENAME": "PURCHASE_ORDER_FULL_",
+				"ENABLE_FLAG": "Y"
+			}			
+		}
+	}
+}
+
+		
